@@ -1,0 +1,22 @@
+Cleaning report for: superstore.csv
+Generated on: 2026-09-23 22:28:05
+
+Loaded file using UTF-8 encoding.
+Raw dataset shape: 51290 rows, 27 columns
+
+WARNING: Found column(s) with non-standard characters in their name: ['记录数']
+These were NOT deleted. Review them manually — they may contain valid data.
+Renamed for safety: {'记录数': 'unnamed_column_1'}
+Standardized column names to lowercase_with_underscores.
+  Before: ['Category', 'City', 'Country', 'Customer.ID', 'Customer.Name', 'Discount', 'Market', 'unnamed_column_1', 'Order.Date', 'Order.ID', 'Order.Priority', 'Product.ID', 'Product.Name', 'Profit', 'Quantity', 'Region', 'Row.ID', 'Sales', 'Segment', 'Ship.Date', 'Ship.Mode', 'Shipping.Cost', 'State', 'Sub.Category', 'Year', 'Market2', 'weeknum']
+  After:  ['category', 'city', 'country', 'customer_id', 'customer_name', 'discount', 'market', 'unnamed_column_1', 'order_date', 'order_id', 'order_priority', 'product_id', 'product_name', 'profit', 'quantity', 'region', 'row_id', 'sales', 'segment', 'ship_date', 'ship_mode', 'shipping_cost', 'state', 'sub_category', 'year', 'market2', 'weeknum']
+
+Duplicate rows found and removed: 0
+Trimmed extra whitespace in 18 text column(s).
+Converted to proper date format: ['order_date', 'ship_date']
+Converted text to numbers: none found
+No missing values found.
+Standardized capitalization in likely categorical columns.
+
+Final cleaned shape: 51290 rows, 27 columns
+Cleaned file saved as: superstore_cleaned.csv
