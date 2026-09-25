@@ -1,0 +1,345 @@
+Dataset Shape: (51290, 27)
+
+First 5 Rows:
+          Category         City        Country  ...  Year        Market2  Weeknum
+0  Office Supplies  Los Angeles  United States  ...  2011  North America        2
+1  Office Supplies  Los Angeles  United States  ...  2011  North America        4
+2  Office Supplies  Los Angeles  United States  ...  2011  North America       32
+3  Office Supplies  Los Angeles  United States  ...  2011  North America       32
+4  Office Supplies  Los Angeles  United States  ...  2011  North America       40
+
+[5 rows x 27 columns]
+
+BASIC INFORMATION
+
+Missing Values:
+Category            0
+City                0
+Country             0
+Customer_id         0
+Customer_name       0
+Discount            0
+Market              0
+Unnamed_column_1    0
+Order_Date          0
+Order_id            0
+Order_priority      0
+Product_id          0
+Product_name        0
+Profit              0
+Quantity            0
+Region              0
+Row_id              0
+Sales               0
+Segment             0
+Ship_date           0
+Ship_mode           0
+Shipping_cost       0
+State               0
+Sub_category        0
+Year                0
+Market2             0
+Weeknum             0
+Month               0
+Month_Name          0
+dtype: int64
+
+Summary Statistics:
+              Sales        Profit      Quantity
+count  51290.000000  51290.000000  51290.000000
+mean     246.498440     28.610982      3.476545
+std      487.567175    174.340972      2.278766
+min        0.000000  -6599.978000      1.000000
+25%       31.000000      0.000000      2.000000
+50%       85.000000      9.240000      3.000000
+75%      251.000000     36.810000      5.000000
+max    22638.000000   8399.976000     14.000000
+
+TOTAL SALES, PROFIT AND QUANTITY
+Total Sales: 12642905
+Total Profit: 1467457.2912800002
+Total Quantity Sold: 178312
+
+Sales by Category:
+Category
+Technology         4744691
+Furniture          4110884
+Office Supplies    3787330
+Name: Sales, dtype: int64
+
+Profit by Category:
+Category
+Technology         663778.73318
+Office Supplies    518473.83430
+Furniture          285204.72380
+Name: Profit, dtype: float64
+
+Quantity by Category:
+Category
+Office Supplies    108182
+Technology          35176
+Furniture           34954
+Name: Quantity, dtype: int64
+
+Sales by Sub-category:
+Sub_category
+Phones         1706874
+Copiers        1509439
+Chairs         1501682
+Bookcases      1466559
+Storage        1127124
+Appliances     1011081
+Machines        779071
+Tables          757034
+Accessories     749307
+Binders         461952
+Furnishings     385609
+Art             372163
+Paper           244307
+Supplies        243090
+Envelopes       170926
+Fasteners        83254
+Labels           73433
+Name: Sales, dtype: int64
+
+Profit by Sub-category:
+Sub_category
+Copiers        258567.54818
+Phones         216717.00580
+Bookcases      161924.41950
+Appliances     141680.58940
+Chairs         140396.26750
+Accessories    129626.30620
+Storage        108461.48980
+Binders         72449.84600
+Paper           59207.68270
+Machines        58867.87300
+Art             57953.91090
+Furnishings     46967.42550
+Envelopes       29601.11630
+Supplies        22583.26310
+Labels          15010.51200
+Fasteners       11525.42410
+Tables         -64083.38870
+Name: Profit, dtype: float64
+
+Quantity by Sub-category:
+Sub_category
+Binders        21429
+Storage        16917
+Art            16301
+Paper          12822
+Chairs         12336
+Phones         11870
+Furnishings    11225
+Accessories    10946
+Labels          9322
+Supplies        8543
+Fasteners       8390
+Envelopes       8380
+Bookcases       8310
+Copiers         7454
+Appliances      6078
+Machines        4906
+Tables          3083
+Name: Quantity, dtype: int64
+
+Sales by Region:
+Region
+Central           2822399
+South             1600960
+North             1248192
+Oceania           1100207
+Southeast Asia     884438
+North Asia         848349
+Emea               806184
+Africa             783776
+Central Asia       752839
+West               725514
+East               678834
+Caribbean          324281
+Canada              66932
+Name: Sales, dtype: int64
+
+Profit by Region:
+Region
+Central           311403.98164
+North             194597.95252
+North Asia        165578.42100
+South             140355.76618
+Central Asia      132480.18700
+Oceania           120089.11200
+West              108418.44890
+East               91522.78000
+Africa             88871.63100
+Emea               43897.97100
+Caribbean          34571.32104
+Southeast Asia     17852.32900
+Canada             17817.39000
+Name: Profit, dtype: float64
+
+Sales by Year:
+Year
+2011    2259511
+2012    2677493
+2013    3405860
+2014    4300041
+Name: Sales, dtype: int64
+
+Profit by Year:
+Year
+2011    248940.81154
+2012    307415.27910
+2013    406935.23018
+2014    504165.97046
+Name: Profit, dtype: float64
+
+Quantity by Year:
+Year
+2011    31443
+2012    38111
+2013    48136
+2014    60622
+Name: Quantity, dtype: int64
+
+Monthly Sales:
+Order_Date
+2011-01     98902
+2011-02     91152
+2011-03    145726
+2011-04    116927
+2011-05    146762
+2011-06    215214
+2011-07    115518
+2011-08    207570
+2011-09    290230
+2011-10    199070
+2011-11    298499
+2011-12    333941
+2012-01    135775
+2012-02    100521
+2012-03    163092
+2012-04    161060
+2012-05    208370
+2012-06    256181
+2012-07    145247
+2012-08    303158
+2012-09    289390
+2012-10    252942
+2012-11    323512
+2012-12    338245
+2013-01    199197
+2013-02    167247
+2013-03    198591
+2013-04    177835
+2013-05    260525
+2013-06    396513
+2013-07    229940
+2013-08    326491
+2013-09    376626
+2013-10    293423
+2013-11    373996
+2013-12    405476
+2014-01    241267
+2014-02    184848
+2014-03    263110
+2014-04    242781
+2014-05    288404
+2014-06    401843
+2014-07    258718
+2014-08    456633
+2014-09    481186
+2014-10    422785
+2014-11    555312
+2014-12    503154
+Freq: M, Name: Sales, dtype: int64
+
+Monthly Profit:
+Order_Date
+2011-01     8321.80096
+2011-02    12417.90698
+2011-03    15303.56826
+2011-04    12902.32438
+2011-05    12183.82870
+2011-06    23415.24702
+2011-07     5585.00352
+2011-08    23713.66772
+2011-09    35776.88394
+2011-10    25963.41834
+2011-11    32709.17772
+2011-12    40647.98400
+2012-01    10401.63764
+2012-02    15000.09618
+2012-03    17992.91756
+2012-04    17366.96722
+2012-05    29876.70374
+2012-06    34407.15362
+2012-07    15585.38842
+2012-08    43573.87858
+2012-09    27776.18034
+2012-10    30662.88270
+2012-11    31820.72180
+2012-12    32950.75130
+2013-01    26810.55968
+2013-02    23762.49610
+2013-03    23433.77462
+2013-04    19462.03844
+2013-05    28495.69410
+2013-06    45478.41340
+2013-07    28863.82720
+2013-08    31023.66846
+2013-09    38905.66778
+2013-10    42433.22258
+2013-11    48062.99670
+2013-12    50202.87112
+2014-01    28001.38626
+2014-02    19751.69996
+2014-03    37357.26052
+2014-04    23782.30120
+2014-05    33953.55774
+2014-06    43778.60280
+2014-07    28035.87258
+2014-08    53542.89496
+2014-09    67979.45110
+2014-10    58209.83476
+2014-11    62856.58790
+2014-12    46916.52068
+Freq: M, Name: Profit, dtype: float64
+
+Category + Sub-category Analysis:
+                                Sales        Profit  Quantity
+Category        Sub_category                                 
+Furniture       Bookcases     1466559  161924.41950      8310
+                Chairs        1501682  140396.26750     12336
+                Furnishings    385609   46967.42550     11225
+                Tables         757034  -64083.38870      3083
+Office Supplies Appliances    1011081  141680.58940      6078
+                Art            372163   57953.91090     16301
+                Binders        461952   72449.84600     21429
+                Envelopes      170926   29601.11630      8380
+                Fasteners       83254   11525.42410      8390
+                Labels          73433   15010.51200      9322
+                Paper          244307   59207.68270     12822
+                Storage       1127124  108461.48980     16917
+                Supplies       243090   22583.26310      8543
+Technology      Accessories    749307  129626.30620     10946
+                Copiers       1509439  258567.54818      7454
+                Machines       779071   58867.87300      4906
+                Phones        1706874  216717.00580     11870
+
+SALES VS PROFIT RELATIONSHIP
+Sales-Profit Correlation: 0.4849231008085673
+
+IMPORTANT INSIGHTS
+
+Highest Sales Category: Technology -> 4744691
+Highest Profit Category: Technology -> 663778.73318
+Highest Quantity Category: Office Supplies -> 108182
+Highest Sales Sub-category: Phones -> 1706874
+Lowest Profit Sub-category: Tables -> -64083.3887
+Highest Sales Region: Central -> 2822399
+Highest Profit Region: Central -> 311403.98164
+Highest Sales Year: 2014 -> 4300041
+Highest Profit Year: 2014 -> 504165.97046
+
+Sales-Profit Correlation: 0.4849231008085673
