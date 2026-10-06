@@ -1,5 +1,6 @@
 import os
 import tempfile
+import shutil
 
 import pandas as pd
 import streamlit as st
@@ -8,7 +9,12 @@ from clean import (
     clean_data,
     profile_suspicious_columns
 )
-
+POWER_BI_URL = "https://app.powerbi.com/links/8DvOmX8rw-?ctid=2c5bdaf4-8ff2-4bd9-bd54-7c50ab219590&pbi_source=linkShare&bookmarkGuid=933e2701-8421-424a-9def-f20135b5a8f9"
+ONEDRIVE_DATA_DIR = "/Users/palaksingh/Library/CloudStorage/OneDrive-BENNETTUNIVERSITY/Raw2Rich/Data"
+ONEDRIVE_TRUSTED_FILE = os.path.join(
+    ONEDRIVE_DATA_DIR,
+    "superstore_cleaned.csv"
+)
 
 # =========================================================
 # PAGE SETTINGS
@@ -320,6 +326,15 @@ if uploaded_file is not None:
                         excluded_columns=excluded_columns,
                         rename_map=rename_map
                     )
+                     # Automatically copy trusted data to OneDrive
+                    os.makedirs(ONEDRIVE_DATA_DIR, exist_ok=True)
+
+                    shutil.copy2(
+                            cleaned_path,
+                            ONEDRIVE_TRUSTED_FILE
+
+                    )
+                    st.success("Trusted dataset automatically synced to OneDrive.")
 
 
                 except Exception as e:
@@ -499,7 +514,22 @@ if uploaded_file is not None:
         # =================================================
 
         st.divider()
+        
 
+        st.markdown("---")
+
+        st.subheader("🚀 Trusted Data Ready")
+
+        st.success("Your data has been cleaned and validated successfully.")
+
+        st.link_button( 
+            "📊 Open Power BI Dashboard",
+            POWER_BI_URL
+        )
+
+        st.caption(
+             "Open the refreshed Power BI dashboard to explore trusted business insights."
+        )       
         st.header(
             "📊 Raw2Rich Dashboard"
         )
