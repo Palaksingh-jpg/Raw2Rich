@@ -1,0 +1,4 @@
+__pycache__/
+tmp*_cleaned.csv
+tmp*_cleaning_report.txt
+~
